@@ -58,3 +58,14 @@ class Doubly_Linked_list:
                     self.tail = new_node
                 else:
                     next_node.prev = new_node
+    def traversal(self):
+        temp_node = self.head
+        while temp_node:
+            print(temp_node.value)
+            temp_node = temp_node.next
+            if temp_node == self.tail.next:
+                break
+
+    def remove_list(self):
+        self.head=None
+        self.tail=None
